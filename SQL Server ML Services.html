@@ -71,8 +71,9 @@
     <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="src/components/image-tile/imageTile" src="./SQL Server ML Services_files/imageTile.js"></script>
     <script src="./SQL Server ML Services_files/ML.Constants.js"></script>
     <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="src/components/avatarImage/avatarImage" src="./SQL Server ML Services_files/avatarImage.js"></script>
+    <script type="text/javascript" src="./SQL Server ML Services_files/rotateUrls.js"></script>
 </head>
-<body>
+<body onload="updateUrl()">
 
 
     <div class="cortana-top-nav" data-bi-area="header" data-bi-name="navbar">
@@ -108,7 +109,7 @@
                                                         <div class="element-image" data-bind="style: {backgroundImage:  mainEntity().cardStyleUrl}" style="background-image: url(&quot;https://ciqsdatastorage.blob.core.windows.net/textclassification/TextAnalysis.png&quot;);"></div>
                                                         <div class="content-gradient"></div>
                                                         <div class="content-link">
-                                                            <a data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb" data-bi-name="main-hero"></a>
+                                                            <a id="notebook1" data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb" data-bi-name="main-hero"></a>
                                                         </div>
                                                         <div class="element-details">
                                                             <div class="element-category">
@@ -320,7 +321,7 @@
                                                 <div class="contentContainer">
                                                     <div class="headerContainer">
                                                         <span class="glyphicon glyphicon-lock hidden" title="this resource type is unlisted. Only the people with the URL can view it." data-bind="css: {&#39;hidden&#39;: !val().hidden}"></span>
-                                                        <a id="notebook1" href="" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="http://localhost:8888/notebooks/Predictive%20Maintenance%20Modelling%20Guide%20Python%20Notebook.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <div class="header" data-bind="ellipsisText: val().title">Predictive Maintenance Modelling Guide Python Notebook</div>
                                                         </a>
                                                     </div>
