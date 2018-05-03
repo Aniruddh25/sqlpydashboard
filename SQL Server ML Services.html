@@ -549,9 +549,25 @@
                                                 <!-- /ko -->
                                             </div>
                                         </experiment-card>
-                                    </div>
-                                    <!-- /ko -->
-                                </entities-strip>
+                                        <experiment-card class="experimentCard" params="experiment: $data, mdaSection: $parent.mdaSection">
+                                            <div class="btn-container">
+                                                <a class="button-link-wrapper" data-bi-name="open_studio" data-bind="attr:{ href: editableUrl }" target="_blank" href="https://portal.azure.com/#create/microsoft-ads.standard-data-science-vmstandard-data-science-vm">
+                                                    <button class="action-btn btn-primaryGreen open-btn register-for-download" data-bind="css:{&#39;in-edit&#39;: disableEdit}, click: viewLink">
+                                                        <span class="caption" data-bind="text: editableCaption">Create a Data Science VM</span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="separatorCategory"></div>
+                                            <div class="btn-container">
+                                                <a class="button-link-wrapper" data-bi-name="open_studio" data-bind="attr:{ href: editableUrl }" target="_blank" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb">
+                                                    <button class="action-btn btn-primaryGreen open-btn register-for-download" data-bind="css:{&#39;in-edit&#39;: disableEdit}, click: viewLink">
+                                                        <span class="caption" data-bind="text: editableCaption">Try it out in a Jupyter notebook</span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                       </experiment-card>
+                                                <!-- /ko -->
+</entities-strip>
                                 <entities-strip params="stripParams:trdStrip, mdaSection: trdSection"><!-- ko if: hasEntities --><!-- /ko --></entities-strip>
                                 <entities-strip params="stripParams:quatStrip, mdaSection: quatSection"><!-- ko if: hasEntities --><!-- /ko --></entities-strip>
                             </div>
