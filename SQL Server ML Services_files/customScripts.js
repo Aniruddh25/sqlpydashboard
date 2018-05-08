@@ -8,26 +8,29 @@ function updateUrl() {
 
     if (element != null) {
         setCredentials(username, password);
-        element.setAttribute("href","http://52.229.58.170:8000/user/user" + randomNumber + "/notebooks/user" + randomNumber);
+        element.setAttribute("url","http://52.229.58.170:8000/user/user" + randomNumber + "/notebooks/user" + randomNumber);
     }
-};
-
-function goToJupyterHub(id) {
-    element = document.getElementById(id);
-    url = element.getAttribute("href");
-    username = element.getAttribute("username");
-    password = element.getAttribute("password");
     ret = $.ajax(login_url,
         {
             method: 'POST',
             data: { 'username': username, 'password': password },
             crossDomain: true,
         });
+};
+
+function goToJupyterHub(id) {
+    element = document.getElementById(id);
+    url = element.getAttribute("url");
+    username = element.getAttribute("username");
+    password = element.getAttribute("password");
     $.ajax(url,
         {
             method: 'GET',
             xhrFields: { withCredentials: true },
-            crossDomain: true
+            crossDomain: true,
+            success: function (data) {
+                $(".result").html(data);
+            }
         });
 }
 

@@ -109,14 +109,18 @@
                                                         <div class="element-image" data-bind="style: {backgroundImage:  mainEntity().cardStyleUrl}" style="background-image: url(&quot;https://ciqsdatastorage.blob.core.windows.net/textclassification/TextAnalysis.png&quot;);"></div>
                                                         <div class="content-gradient"></div>
                                                         <div class="content-link">
-                                                            <a id='notebook1' data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero" target="_blank"></a>
+                                                            <a id='notebook2' data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero" target="_blank"></a>
                                                         </div>
                                                         <div class="element-details">
-                                                            <div class="element-category">
-                                                                <a id='notebook2' class="entity" data-bind="attr: {href: mainEntity().categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().cardTypeName" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero">Solution</a>
-                                                            </div>
                                                             <div class="element-name">
-                                                                <a id ="notebook3" class="title" data-bind="attr: {href: mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().title" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero">Text Classification with SQL Server</a>
+                                                                <a id="notebook3" class="title" data-bind="attr: {href: mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().title" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero">Text Classification with SQL Server</a>
+                                                            </div>
+                                                            <div class="element-category">
+                                                                <button class="action-btn btn-primaryGreen open-btn"
+                                                                        id='notebook1' data-bind="attr: {href: mainEntity().categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().cardTypeName"
+                                                                        onClick="goToJupyterHub(this.getAttribute('id'))" data-bi-name="main-hero">
+                                                                    Try the solution &raquo;
+                                                                </button>
                                                             </div>
                                                             <div class="element-author">
                                                                 <a data-bind="attr: {href:mainEntity().profileUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().ownerName" href="https://gallery.azure.ai/Home/Author?authorId=72f988bf86f141af91ab2d7cd011db47" data-bi-name="main-hero">Microsoft</a>
@@ -197,7 +201,7 @@
                                         <experiment-card class="experimentCard" params="experiment: $data, mdaSection: $parent.mdaSection">
                                             <div class="card">
                                                 <div class="fixed-ratio-container">
-                                                    <a href="https://docs.microsoft.com/en-us/sql/advanced-analytics/architecture-overview-machine-learning?view=sql-server-2017" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}"  target="_blank">
+                                                    <a href="https://docs.microsoft.com/en-us/sql/advanced-analytics/architecture-overview-machine-learning?view=sql-server-2017" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}" target="_blank">
                                                         <div class="image-card screenShot" data-bind="style:{&#39;background-image&#39;: cardStyleUrl}, class: imageClasses" style="background-image: url(&quot;https://sqlserverml.blob.core.windows.net/media/Architecture.PNG&quot;);">
                                                             <div class="item-counter hidden" data-bind="css:{hidden: !collectionType}, text: collectionCount"></div>
                                                         </div>
@@ -248,7 +252,7 @@
                                         <experiment-card class="experimentCard" params="experiment: $data, mdaSection: $parent.mdaSection">
                                             <div class="card">
                                                 <div class="fixed-ratio-container">
-                                                    <a href="https://docs.microsoft.com/en-us/sql/advanced-analytics/install/sql-machine-learning-services-windows-install?view=sql-server-2017" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}"  target="_blank">
+                                                    <a href="https://docs.microsoft.com/en-us/sql/advanced-analytics/install/sql-machine-learning-services-windows-install?view=sql-server-2017" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}" target="_blank">
                                                         <div class="image-card screenShot" data-bind="style:{&#39;background-image&#39;: cardStyleUrl}, class: imageClasses" style="background-image: url(&quot;https://sqlserverml.blob.core.windows.net/media/PythonInstallationEdited.png&quot;);">
                                                             <div class="item-counter hidden" data-bind="css:{hidden: !collectionType}, text: collectionCount"></div>
                                                         </div>
@@ -556,7 +560,7 @@
                                                 </button>
                                             </a>
                                         </div>
-                                                <!-- /ko -->
+                                        <!-- /ko -->
                                 </entities-strip>
                                 <entities-strip params="stripParams:trdStrip, mdaSection: trdSection"><!-- ko if: hasEntities --><!-- /ko --></entities-strip>
                                 <entities-strip params="stripParams:quatStrip, mdaSection: quatSection"><!-- ko if: hasEntities --><!-- /ko --></entities-strip>
