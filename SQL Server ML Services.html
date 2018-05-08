@@ -71,7 +71,7 @@
     <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="src/components/image-tile/imageTile" src="./SQL Server ML Services_files/imageTile.js"></script>
     <script src="./SQL Server ML Services_files/ML.Constants.js"></script>
     <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="src/components/avatarImage/avatarImage" src="./SQL Server ML Services_files/avatarImage.js"></script>
-    <script type="text/javascript" src="./SQL Server ML Services_files/rotateUrls.js"></script>
+    <script type="text/javascript" src="./SQL Server ML Services_files/customScripts.js"></script>
 </head>
 <body onload="updateUrl()">
 
@@ -109,17 +109,17 @@
                                                         <div class="element-image" data-bind="style: {backgroundImage:  mainEntity().cardStyleUrl}" style="background-image: url(&quot;https://ciqsdatastorage.blob.core.windows.net/textclassification/TextAnalysis.png&quot;);"></div>
                                                         <div class="content-gradient"></div>
                                                         <div class="content-link">
-                                                            <a id="notebook1" data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb" data-bi-name="main-hero"></a>
+                                                            <a id='notebook1' data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero" target="_blank"></a>
                                                         </div>
                                                         <div class="element-details">
                                                             <div class="element-category">
-                                                                <a class="entity" data-bind="attr: {href: mainEntity().categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().cardTypeName" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb" data-bi-name="main-hero">Solution</a>
+                                                                <a id='notebook2' class="entity" data-bind="attr: {href: mainEntity().categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().cardTypeName" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero">Solution</a>
                                                             </div>
                                                             <div class="element-name">
-                                                                <a class="title" data-bind="attr: {href: mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().title" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb " data-bi-name="main-hero">Text Classification with SQL Server</a>
+                                                                <a id ="notebook3" class="title" data-bind="attr: {href: mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().title" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero">Text Classification with SQL Server</a>
                                                             </div>
                                                             <div class="element-author">
-                                                                <a data-bind="attr: {href:mainEntity().profileUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().ownerName" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb" data-bi-name="main-hero">Microsoft</a>
+                                                                <a data-bind="attr: {href:mainEntity().profileUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().ownerName" href="https://gallery.azure.ai/Home/Author?authorId=72f988bf86f141af91ab2d7cd011db47" data-bi-name="main-hero">Microsoft</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -299,7 +299,7 @@
                                         <experiment-card class="experimentCard" params="experiment: $data, mdaSection: $parent.mdaSection">
                                             <div class="card" data-bind="onHover: showSharingButton">
                                                 <div class="fixed-ratio-container">
-                                                    <a href="http://localhost:8888/notebooks/Predictive%20Maintenance%20Modelling%20Guide%20Python%20Notebook.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}" target="_blank">
+                                                    <a href="https://gallery.azure.ai/Notebook/Predictive-Maintenance-Modelling-Guide-Python-Notebook-1" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}" target="_blank">
                                                         <div class="image-card screenShot" data-bind="style:{&#39;background-image&#39;: cardStyleUrl}, class: imageClasses" style="background-image: url(&quot;https://sqlserverml.blob.core.windows.net/media/Predictive%20Maintenance%20Modelling.PNG&quot;);">
                                                             <div class="item-counter hidden" data-bind="css:{hidden: !collectionType}, text: collectionCount"></div>
                                                         </div>
@@ -309,7 +309,7 @@
                                                 <!-- ko if: showSharingButton --><!-- /ko -->
                                                 <div class="category-container">
                                                     <span class="cardCategory">
-                                                        <a href="http://localhost:8888/notebooks/Predictive%20Maintenance%20Modelling%20Guide%20Python%20Notebook.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://gallery.azure.ai/Notebook/Predictive-Maintenance-Modelling-Guide-Python-Notebook-1" data-bi-name="recently-added-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <svg class=" icon-svg-card">
                                                                 <use data-bind="attr:{&#39;xlink:href&#39;: svgSprite}" xlink:href="#notebook_card_category"></use>
                                                             </svg>
@@ -321,7 +321,7 @@
                                                 <div class="contentContainer">
                                                     <div class="headerContainer">
                                                         <span class="glyphicon glyphicon-lock hidden" title="this resource type is unlisted. Only the people with the URL can view it." data-bind="css: {&#39;hidden&#39;: !val().hidden}"></span>
-                                                        <a href="http://localhost:8888/notebooks/Predictive%20Maintenance%20Modelling%20Guide%20Python%20Notebook.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://gallery.azure.ai/Notebook/Predictive-Maintenance-Modelling-Guide-Python-Notebook-1" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <div class="header" data-bind="ellipsisText: val().title">Predictive Maintenance Modelling Guide Python Notebook</div>
                                                         </a>
                                                     </div>
@@ -352,7 +352,7 @@
                                         <experiment-card class="experimentCard" params="experiment: $data, mdaSection: $parent.mdaSection">
                                             <div class="card" data-bind="onHover: showSharingButton">
                                                 <div class="fixed-ratio-container">
-                                                    <a href="http://localhost:8888/notebooks/Analyzing%20PyPI%20Data%20to%20Determine%20Python%203%20Support.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}" target="_blank">
+                                                    <a href="https://gallery.azure.ai/Notebook/Analyzing-PyPI-Data-to-Determine-Python-3-Support-2" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}" target="_blank">
                                                         <div class="image-card screenShot" data-bind="style:{&#39;background-image&#39;: cardStyleUrl}, class: imageClasses" style="background-image: url(&quot;https://sqlserverml.blob.core.windows.net/media/Determine%20Python3%20Support.PNG&quot;);">
                                                             <div class="item-counter hidden" data-bind="css:{hidden: !collectionType}, text: collectionCount"></div>
                                                         </div>
@@ -362,7 +362,7 @@
                                                 <!-- ko if: showSharingButton --><!-- /ko -->
                                                 <div class="category-container">
                                                     <span class="cardCategory">
-                                                        <a href="http://localhost:8888/notebooks/Analyzing%20PyPI%20Data%20to%20Determine%20Python%203%20Support.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://gallery.azure.ai/Notebook/Analyzing-PyPI-Data-to-Determine-Python-3-Support-2" data-bi-name="recently-added-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <svg class=" icon-svg-card">
                                                                 <use data-bind="attr:{&#39;xlink:href&#39;: svgSprite}" xlink:href="#notebook_card_category"></use>
                                                             </svg>
@@ -374,7 +374,7 @@
                                                 <div class="contentContainer">
                                                     <div class="headerContainer">
                                                         <span class="glyphicon glyphicon-lock hidden" title="this resource type is unlisted. Only the people with the URL can view it." data-bind="css: {&#39;hidden&#39;: !val().hidden}"></span>
-                                                        <a href="http://localhost:8888/notebooks/Analyzing%20PyPI%20Data%20to%20Determine%20Python%203%20Support.ipynb" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://gallery.azure.ai/Notebook/Analyzing-PyPI-Data-to-Determine-Python-3-Support-2" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <div class="header" data-bind="ellipsisText: val().title">Analyzing PyPI Data to Determine Python 3 Support</div>
                                                         </a>
                                                     </div>
@@ -417,7 +417,7 @@
                                                 <!-- ko if: showSharingButton --><!-- /ko -->
                                                 <div class="category-container">
                                                     <span class="cardCategory">
-                                                        <a href="https://sqlserverml.blob.core.windows.net/sqlpython/SQL%20Server%20ML%20Services_files/MLInstall.mp4" data-bi-name="popular-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://www.youtube.com/watch?v=9QbavXKfL4A" data-bi-name="popular-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <svg class=" icon-svg-card">
                                                                 <use data-bind="attr:{&#39;xlink:href&#39;: svgSprite}" xlink:href="#video_training_card_category"></use>
                                                             </svg>
@@ -429,13 +429,13 @@
                                                 <div class="contentContainer">
                                                     <div class="headerContainer">
                                                         <span class="glyphicon glyphicon-lock hidden" title="this resource type is unlisted. Only the people with the URL can view it." data-bind="css: {&#39;hidden&#39;: !val().hidden}"></span>
-                                                        <a href="https://sqlserverml.blob.core.windows.net/media/MLInstall.mp4" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://www.youtube.com/watch?v=9QbavXKfL4A" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <div class="header" data-bind="ellipsisText: val().title">How to Install Machine Learning Services in SQL Server</div>
                                                         </a>
                                                     </div>
                                                     <div class="subHeaderContainer" data-bind="ellipsisText: subHeader, visible: showSubHeader" style="display: none;"></div>
                                                     <div class="descriptionVideo">
-                                                        <video width="260" height="160" controls> <source src="https://sqlserverml.blob.core.windows.net/media/MLInstall.mp4" type="video/mp4" /></video>
+                                                        <video width="260" height="160" controls> <source src="https://www.youtube.com/watch?v=9QbavXKfL4A" type="video/mp4" /></video>
                                                     </div>
                                                 </div>
                                                 <!-- ko if: !hideAuthor -->
@@ -463,7 +463,7 @@
                                                 <!-- ko if: showSharingButton --><!-- /ko -->
                                                 <div class="category-container">
                                                     <span class="cardCategory">
-                                                        <a href="https://www.youtube.com/embed/L4IkrO06GlA" data-bi-name="popular-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://www.youtube.com/watch?v=UJeTJWzrgSg" data-bi-name="popular-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <svg class=" icon-svg-card">
                                                                 <use data-bind="attr:{&#39;xlink:href&#39;: svgSprite}" xlink:href="#video_training_card_category"></use>
                                                             </svg>
@@ -475,13 +475,13 @@
                                                 <div class="contentContainer">
                                                     <div class="headerContainer">
                                                         <span class="glyphicon glyphicon-lock hidden" title="this resource type is unlisted. Only the people with the URL can view it." data-bind="css: {&#39;hidden&#39;: !val().hidden}"></span>
-                                                        <a href="https://www.youtube.com/embed/L4IkrO06GlA" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://www.youtube.com/watch?v=UJeTJWzrgSg" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <div class="header" data-bind="ellipsisText: val().title">How to Enable Machine Learning Services in SQL Server</div>
                                                         </a>
                                                     </div>
                                                     <div class="subHeaderContainer" data-bind="ellipsisText: subHeader, visible: showSubHeader" style="display: none;"></div>
                                                     <div class="descriptionVideo">
-                                                        <iframe width="260" height="160" src="https://www.youtube.com/embed/L4IkrO06GlA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                        <iframe width="260" height="160" src="https://www.youtube.com/watch?v=UJeTJWzrgSg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                                     </div>
                                                 </div>
                                                 <!-- ko if: !hideAuthor -->
@@ -509,7 +509,7 @@
                                                 <!-- ko if: showSharingButton --><!-- /ko -->
                                                 <div class="category-container">
                                                     <span class="cardCategory">
-                                                        <a href="https://www.youtube.com/embed/XlHRpYj4Q8Y" data-bi-name="popular-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://www.youtube.com/watch?v=5wEGDPLG8CA" data-bi-name="popular-main" data-bind="attr: {href:categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <svg class=" icon-svg-card">
                                                                 <use data-bind="attr:{&#39;xlink:href&#39;: svgSprite}" xlink:href="#video_training_card_category"></use>
                                                             </svg>
@@ -521,13 +521,13 @@
                                                 <div class="contentContainer">
                                                     <div class="headerContainer">
                                                         <span class="glyphicon glyphicon-lock hidden" title="this resource type is unlisted. Only the people with the URL can view it." data-bind="css: {&#39;hidden&#39;: !val().hidden}"></span>
-                                                        <a href="https://www.youtube.com/embed/XlHRpYj4Q8Y" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
+                                                        <a href="https://www.youtube.com/watch?v=5wEGDPLG8CA" data-bi-name="recently-added-main" data-bind="attr: {href: detailsUrl, &#39;data-bi-name&#39;: mdaSection}">
                                                             <div class="header" data-bind="ellipsisText: val().title">How to Execute Machine Learning Services in SQL Server</div>
                                                         </a>
                                                     </div>
                                                     <div class="subHeaderContainer" data-bind="ellipsisText: subHeader, visible: showSubHeader" style="display: none;"></div>
                                                     <div class="descriptionVideo">
-                                                        <iframe width="260" height="160" src="https://www.youtube.com/embed/XlHRpYj4Q8Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                        <iframe width="260" height="160" src="https://www.youtube.com/watch?v=5wEGDPLG8CA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                                     </div>
                                                 </div>
                                                 <!-- ko if: !hideAuthor -->
@@ -549,25 +549,15 @@
                                                 <!-- /ko -->
                                             </div>
                                         </experiment-card>
-                                        <experiment-card class="experimentCard" params="experiment: $data, mdaSection: $parent.mdaSection">
-                                            <div class="btn-container">
-                                                <a class="button-link-wrapper" data-bi-name="open_studio" data-bind="attr:{ href: editableUrl }" target="_blank" href="https://portal.azure.com/#create/microsoft-ads.standard-data-science-vmstandard-data-science-vm">
-                                                    <button class="action-btn btn-primaryGreen open-btn register-for-download" data-bind="css:{&#39;in-edit&#39;: disableEdit}, click: viewLink">
-                                                        <span class="caption" data-bind="text: editableCaption">Create a Data Science VM</span>
-                                                    </button>
-                                                </a>
-                                            </div>
-                                            <div class="separatorCategory"></div>
-                                            <div class="btn-container">
-                                                <a class="button-link-wrapper" data-bi-name="open_studio" data-bind="attr:{ href: editableUrl }" target="_blank" href="http://52.151.37.229:9999/notebooks/Samples/TextClassificationPython_Matthew.ipynb">
-                                                    <button class="action-btn btn-primaryGreen open-btn register-for-download" data-bind="css:{&#39;in-edit&#39;: disableEdit}, click: viewLink">
-                                                        <span class="caption" data-bind="text: editableCaption">Try it out in a Jupyter notebook</span>
-                                                    </button>
-                                                </a>
-                                            </div>
-                                       </experiment-card>
+                                        <div class="btn-container">
+                                            <a class="button-link-wrapper" data-bi-name="open_studio" data-bind="attr:{ href: editableUrl }" target="_blank" href="https://portal.azure.com/#create/microsoft-ads.standard-data-science-vmstandard-data-science-vm">
+                                                <button class="action-btn btn-primaryGreen open-btn register-for-download" data-bind="css:{&#39;in-edit&#39;: disableEdit}">
+                                                    <span class="caption" data-bind="text: editableCaption">Create a Data Science VM</span>
+                                                </button>
+                                            </a>
+                                        </div>
                                                 <!-- /ko -->
-</entities-strip>
+                                </entities-strip>
                                 <entities-strip params="stripParams:trdStrip, mdaSection: trdSection"><!-- ko if: hasEntities --><!-- /ko --></entities-strip>
                                 <entities-strip params="stripParams:quatStrip, mdaSection: quatSection"><!-- ko if: hasEntities --><!-- /ko --></entities-strip>
                             </div>
