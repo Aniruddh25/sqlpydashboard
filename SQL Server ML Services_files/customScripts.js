@@ -5,13 +5,12 @@ function updateUrl() {
     element = document.getElementById("notebook1")
     username = "user" + randomNumber;
     password = "user" + randomNumber + "magickey"
+    url = "http://52.229.58.170:8000/user/user" + randomNumber + "/notebooks/BeginHere_TextClassificationPython.ipynb";
 
     if (element != null) {
         setCredentials(username, password);
-        element.setAttribute("href", "http://52.229.58.170:8000/user/user" + randomNumber + "/notebooks/BeginHere_TextClassificationPython.ipynb");
+        element.setAttribute("href", url);
     }
-
-    document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/;domain=52.229.58.170"); });
 
     ret = $.ajax(login_url,
         {
@@ -20,6 +19,19 @@ function updateUrl() {
             xhrFields: { withCredentials: true },
             crossDomain: true,
         });
+
+    ret = $.ajax(url,
+        {
+            method: 'GET',
+            xhrFields: { withCredentials: true },
+            crossDomain: true,
+            error: function (data) {
+                document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/;"); });
+                document.cookie += "jupyter-hub-token=; path='/'; domain=52.229.58.170; expires=" + new Date(0).toGMTString();
+                document.cookie += "_xsrf=; path='/'; domain=52.229.58.170; expires=" + new Date(0).toGMTString();
+            }
+        });
+
 };
 
 function setCredentials(username, password) {
