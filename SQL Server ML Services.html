@@ -109,18 +109,18 @@
                                                         <div class="element-image" data-bind="style: {backgroundImage:  mainEntity().cardStyleUrl}" style="background-image: url(&quot;https://ciqsdatastorage.blob.core.windows.net/textclassification/TextAnalysis.png&quot;);"></div>
                                                         <div class="content-gradient"></div>
                                                         <div class="content-link">
-                                                            <a id='notebook2' data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero" target="_blank"></a>
+                                                            <a data-bind="attr: {href:mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}" href="https://gallery.azure.ai/Solution/Text-Classification-with-SQL-Server-3" data-bi-name="main-hero" target="_blank"></a>
                                                         </div>
                                                         <div class="element-details">
                                                             <div class="element-name">
-                                                                <a id="notebook3" class="title" data-bind="attr: {href: mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().title" onClick="goToJupyterHub(this.getAttribute('id'))" username="user0" password="user0magickey" href="http://52.229.58.170:8000/user/user0/notebooks/user0/" data-bi-name="main-hero">Text Classification with SQL Server</a>
+                                                                <a class="title" data-bind="attr: {href: mainEntity().detailsUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().title" href="https://gallery.azure.ai/Solution/Text-Classification-with-SQL-Server-3" data-bi-name="main-hero">Text Classification with SQL Server</a>
                                                             </div>
                                                             <div class="element-category">
-                                                                <button class="action-btn btn-primaryGreen open-btn"
-                                                                        id='notebook1' data-bind="attr: {href: mainEntity().categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().cardTypeName"
-                                                                        onClick="goToJupyterHub(this.getAttribute('id'))" data-bi-name="main-hero">
+                                                                <a class="action-btn btn-primaryGreen open-btn"
+                                                                   id='notebook1' data-bind="attr: {href: mainEntity().categoryBrowseUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().cardTypeName"
+                                                                   data-bi-name="main-hero" target="_blank">
                                                                     Try the solution &raquo;
-                                                                </button>
+                                                                </a>
                                                             </div>
                                                             <div class="element-author">
                                                                 <a data-bind="attr: {href:mainEntity().profileUrl, &#39;data-bi-name&#39;: mdaSection}, text: mainEntity().ownerName" href="https://gallery.azure.ai/Home/Author?authorId=72f988bf86f141af91ab2d7cd011db47" data-bi-name="main-hero">Microsoft</a>
@@ -439,7 +439,7 @@
                                                     </div>
                                                     <div class="subHeaderContainer" data-bind="ellipsisText: subHeader, visible: showSubHeader" style="display: none;"></div>
                                                     <div class="descriptionVideo">
-                                                        <video width="260" height="160" controls> <source src="https://www.youtube.com/watch?v=9QbavXKfL4A" type="video/mp4" /></video>
+                                                        <iframe width="260" height="160" src="https://www.youtube.com/watch?v=9QbavXKfL4A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                                     </div>
                                                 </div>
                                                 <!-- ko if: !hideAuthor -->

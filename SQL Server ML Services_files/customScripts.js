@@ -8,31 +8,19 @@ function updateUrl() {
 
     if (element != null) {
         setCredentials(username, password);
-        element.setAttribute("url","http://52.229.58.170:8000/user/user" + randomNumber + "/notebooks/user" + randomNumber);
+        element.setAttribute("href", "http://52.229.58.170:8000/user/user" + randomNumber + "/notebooks/BeginHere_TextClassificationPython.ipynb");
     }
+
+    document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/;domain=52.229.58.170"); });
+
     ret = $.ajax(login_url,
         {
             method: 'POST',
             data: { 'username': username, 'password': password },
+            xhrFields: { withCredentials: true },
             crossDomain: true,
         });
 };
-
-function goToJupyterHub(id) {
-    element = document.getElementById(id);
-    url = element.getAttribute("url");
-    username = element.getAttribute("username");
-    password = element.getAttribute("password");
-    $.ajax(url,
-        {
-            method: 'GET',
-            xhrFields: { withCredentials: true },
-            crossDomain: true,
-            success: function (data) {
-                $(".result").html(data);
-            }
-        });
-}
 
 function setCredentials(username, password) {
     element = document.getElementById("notebook1")
